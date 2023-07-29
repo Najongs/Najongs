@@ -1,7 +1,7 @@
-<a href="Najongs" target="_blank"><img src="https://img.shields.io/badge/python-A6A9AA?style=flat&logo=python&logoColor=#3776AB"/></a>
-<a href="Najongs" target="_blank"><img src="https://img.shields.io/badge/pandas-A6A9AA?style=flat&logo=pandas&logoColor=#150458"/></a>
-<a href="Najongs" target="_blank"><img src="https://img.shields.io/badge/pytorch-A6A9AA?style=flat&logo=pytorch&logoColor=#EE4C2C"/></a>
-<a href="Najongs" target="_blank"><img src="https://img.shields.io/badge/scikitlearn-A6A9AA?style=flat&logo=scikit-learn&logoColor=#F7931E"/></a>
+<a href="README.md" target="_blank"><img src="https://img.shields.io/badge/python-A6A9AA?style=flat&logo=python&logoColor=#3776AB"/></a>
+<a href="README.md" target="_blank"><img src="https://img.shields.io/badge/pandas-A6A9AA?style=flat&logo=pandas&logoColor=#150458"/></a>
+<a href="README.md" target="_blank"><img src="https://img.shields.io/badge/pytorch-A6A9AA?style=flat&logo=pytorch&logoColor=#EE4C2C"/></a>
+<a href="README.md" target="_blank"><img src="https://img.shields.io/badge/scikitlearn-A6A9AA?style=flat&logo=scikit-learn&logoColor=#F7931E"/></a>
 
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Najongs&show_icons=true&theme=radical)
 
