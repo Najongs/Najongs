@@ -7,7 +7,7 @@
 
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Najongs&show_icons=true&theme=radical)
 
-- 👋 Hi, I’m @Najongs
+
 - 👀 I’m interested in NLP
 - 🌱 I’m currently learning recommend sys
 - 💞️ I’m looking to collaborate on univ
