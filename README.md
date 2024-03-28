@@ -8,9 +8,8 @@
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Najongs&show_icons=true&theme=radical)
 
 
-- 👀 I’m interested in natural language processing, Human-Robot interaction
-- 🌱 I’m currently learning 3D motion generation by Diffusion model
-- 💞️ I’m looking to collaborate on AIGS univ
+- 👀 I’m interested in Robotics & AI
+- 🌱 I’m currently learning Time series models
 - 📫 How to reach me najyeol99@gmail.com
 
 <!---
