@@ -10,7 +10,7 @@
 
 - 👀 I’m interested in Robotics & AI
 - 🌱 I’m currently learning Time series models
-- 📫 How to reach me najyeol99@gmail.com
+- 📫 How to reach me nagus1999@dgist.ac.kr
 
 <!---
 Najongs/Najongs is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
