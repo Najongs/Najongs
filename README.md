@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=transparent&color=random&height=80&section=header&text=👋%20Hi%20I'm%20Najongs%20interested%20in%20NLP&fontSize=50&animation=twinkling" />
+<img src="https://capsule-render.vercel.app/api?type=transparent&color=random&height=80&section=header&text=👋%20Hi%20I'm%20Najongs%20interested%20in%20intelligent%20robotics&fontSize=50&animation=twinkling" />
 
 <a href="README.md" target="_blank"><img src="https://img.shields.io/badge/python-A6A9AA?style=flat&logo=python&logoColor=#3776AB"/></a>
 <a href="README.md" target="_blank"><img src="https://img.shields.io/badge/pandas-A6A9AA?style=flat&logo=pandas&logoColor=#150458"/></a>
