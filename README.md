@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=transparent&color=random&height=80&section=header&text=👋%20Hi%20I'm%20Najongs%20\n&fontSize=50&animation=twinkling" />
+<img src="https://capsule-render.vercel.app/api?type=transparent&color=random&height=80&section=header&text=👋%20Hi%20I'm%20Najongs&fontSize=50&animation=twinkling" />
 
 <img src="https://capsule-render.vercel.app/api?type=transparent&color=random&height=80&section=header&text=%20interested%20in%20intelligent%20robotics&fontSize=50&animation=twinkling" />
 
