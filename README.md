@@ -2,8 +2,9 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,12,20&height=160&section=header&text=Najongs&fontSize=58&fontAlignY=36&desc=robot%20learning%20·%20vision-language-action%20·%20surgical%20robotics&descAlignY=58&descSize=16&animation=fadeIn" />
 
-**Robotics &amp; AI researcher.** I build vision-language-action policies for
-surgical needle insertion, and the perception stack that makes them trustworthy.
+**Researcher at [KIRO](https://www.kiro.re.kr/) — AI Task Intelligence.**
+M.S. from DGIST (Intelligent Robot &amp; Opto-Mechatronics Lab). I build vision-language-action
+policies for precision robot manipulation, and the sensing stack that makes them trustworthy.
 
 [![CV](https://img.shields.io/badge/CV-0b5394?style=flat-square&logo=readthedocs&logoColor=white)](CV.md)
 [![Portfolio](https://img.shields.io/badge/Portfolio-1f6f3f?style=flat-square&logo=readme&logoColor=white)](PORTFOLIO.md)
@@ -21,6 +22,10 @@ surgical needle insertion, and the perception stack that makes them trustworthy.
 | 🤖 | **Robot pose estimation** | Monocular and multi-view robot pose from a *frozen* DINO backbone — one set of weights across arms, no real-world training. Meca500 · FR5 · Franka · Baxter. |
 | 🔦 | **Fiber-optic sensing** | EFPI interferometry and OCT for needle-tip state: phase unwrapping, layer detection, puncture-curve classification. |
 | 🦾 | **Foundation policies** | Bimanual 16-DoF manipulation corpus — 52 datasets, 23k episodes, 10.3M frames — and the multi-GPU pipeline that trains on it. |
+
+**Recent** — *Precision enhancement of epidural force-sensing needle with machine learning*,
+Int. J. Optomechatronics **20**(1) 2026 (SCIE) · first-author papers at **KRoC 2025** and
+**IEIE 2025** · co-author at **IROS**. Full list in the [CV](CV.md).
 
 ## 📚 Open knowledge graph
 

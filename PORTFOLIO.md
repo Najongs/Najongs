@@ -1,167 +1,217 @@
-# Portfolio — Jong-Yeol Na
+# Portfolio — Jongyeol Na (나종열)
 
-Four threads of work, each with the repositories that hold it.
-Diagrams render natively on GitHub; no image assets required.
+Researcher at **KIRO** (Korea Institute of Robotics &amp; Technology Convergence), AI Task Intelligence.
+M.S. from DGIST, Intelligent Robot &amp; Opto-Mechatronics Lab.
 
 📧 [nagus1999@dgist.ac.kr](mailto:nagus1999@dgist.ac.kr) ·
 📄 [CV](CV.md) ·
+💻 [github.com/Najongs](https://github.com/Najongs) ·
 📚 [Knowledge graph](https://najongs.github.io/knowledge-vault/)
+
+> Diagrams render natively on GitHub — no image assets required.
 
 ---
 
-## 1 · DINObotPose — monocular robot pose &amp; joint angles
+## Overview
 
-**Problem.** Recover the 6-DoF camera-to-robot transform *and* the joint angles from a
-single RGB frame — with no encoder readings and no ground-truth bounding box.
-Competing methods take the box from ground truth or an external detector; that makes
-their numbers hard to compare and their pipelines hard to deploy.
+Four projects, one thread: **make a robot act precisely where vision alone cannot tell you
+what is happening.** Each adds a different sensing modality to the loop.
 
-**Approach.** Keypoints are read from a **frozen** DINOv3 backbone. A first pass fits the
-whole frame, then *projects its own solved skeleton* to define the crop for a second
-pass — so the pipeline produces the box it needs. An iterative fit then recovers joint
-angles together with camera pose from those keypoints alone, minimising a robustly
-weighted reprojection error through differentiable forward kinematics.
+| # | Project | Venue | Role | Core |
+|---|---|---|---|---|
+| 01 | Multimodal VLA for precise needle positioning | KRoC 2025 | **1st author** | Qwen-VL + OCT/FPI fusion, Diffusion policy, MuJoCo |
+| 02 | Human-robot collision avoidance via 3D pose | IEIE 2025 | **1st author** | DINOv3 keypoints + FK + PnP |
+| 03 | Epidural force-sensing needle precision | IJO 2026 (SCIE) | 2nd of 5 | FPI phase-shift + LSTM |
+| 04 | Handheld confocal endomicroscope, tremor compensation | IROS | 2nd of 5 | OCT A-line + GRU |
 
 ```mermaid
 flowchart LR
-    IMG["Single RGB frame"] --> BB["DINOv3 backbone<br/>(frozen)"]
-    BB --> P1["Pass 1<br/>full-frame keypoints"]
-    P1 --> FIT1["Iterative fit<br/>robust reprojection"]
-    FIT1 --> SK["Solved skeleton"]
-    SK -->|"project → own bbox"| CROP["Crop"]
-    CROP --> BB2["Crop detector<br/>(last 4 blocks tuned)"]
-    BB2 --> P2["Pass 2<br/>sub-pixel keypoints"]
-    P2 --> FIT2["Iterative fit<br/>differentiable FK"]
-    FIT2 --> OUT["6-DoF pose<br/>+ joint angles"]
+    V["Vision<br/>RGB / DINOv3"] --> P["Robot &amp; scene state"]
+    O["OCT<br/>A-line depth"] --> P
+    F["FPI<br/>force / phase"] --> P
+    P --> A["Action"]
+    A -->|closes loop| P
 
-    style BB fill:#1f3a5f,color:#fff
-    style BB2 fill:#1f3a5f,color:#fff
-    style OUT fill:#2d5016,color:#fff
-    style SK fill:#5c3a00,color:#fff
+    P -.->|"01 VLA policy"| N1["needle insertion"]
+    P -.->|"02 pose estimation"| N2["collision avoidance"]
+    O -.->|"04 GRU"| N4["tremor compensation"]
+    F -.->|"03 LSTM"| N3["puncture detection"]
+
+    style P fill:#1f3a5f,color:#fff
+    style A fill:#2d5016,color:#fff
 ```
-
-No depth model is trained, no weights are updated on the evaluated data, and **one
-configuration serves every camera and both robots**.
-
-**Release.** [`DINObotPose`](https://github.com/Najongs/DINObotPose) `v1.0.0` —
-pinned dependencies, checkpoint SHA-256 manifest, `doctor.py` environment check, and
-`reproduce_paper.sh`. The backbone architecture config ships in-package, so inference
-needs no HuggingFace access.
-
-**Lineage.** [`DINObotPose-v1`](https://github.com/Najongs/DINObotPose-v1) →
-[`DINObotPose2`](https://github.com/Najongs/DINObotPose2) (Fourier domain adaptation) →
-[`DINObotPose3`](https://github.com/Najongs/DINObotPose3) →
-[`DIP_ROBOTPOSE`](https://github.com/Najongs/DIP_ROBOTPOSE) (research tree) → release.
-Earlier still: [`Robot_joint_inference`](https://github.com/Najongs/Robot_joint_inference)
-(2024-12) solved the same problem with DH kinematics and coordinate regression.
 
 ---
 
-## 2 · Needle-insertion VLA — two generations, one task
+## Project 01 · Multimodal VLA for precise robotic needle positioning
 
-**Task.** A Meca500 R3 inserting a needle into an eye phantom, guided by vision and
-language, with fibre-optic sensing at the tip.
+**KRoC 2025 · first author · M.S. thesis topic**
 
-The lineage is not a refactor chain — **v4 replaced the framework rather than absorbing
-its predecessors.** Measured overlap between v3 and v4 is 3 files (3.2%), which is why
-the earlier generations are kept rather than deleted: each holds code that never made
-it forward.
+**Goal.** Automate tasks that require inserting a needle — spinal injection, intraocular
+injection, blood draw — where millimetre error matters and the tip's state is invisible
+to a camera.
+
+**Why it is hard.** VLA models generalise poorly to new robots and unseen tasks, and
+precision insertion needs awareness of *physical interaction*, not just pixels. Collecting
+real demonstrations at that precision is slow and expensive.
+
+**Approach — simulation first.** Build a high-fidelity MuJoCo digital twin of a Meca500
+arm and a trocar-needle insertion task on an eye phantom, then collect data and train
+entirely inside it. A pretrained Qwen-VL foundation model is extended with a **sensor
+encoder** that ingests OCT (depth) and FPI (force) signals; those fuse with the visual and
+linguistic representations to produce physically grounded actions.
 
 ```mermaid
 flowchart TD
-    subgraph REAL["real — physical robot"]
-        Q["Qwen2.5-VL-3B<br/>+ OCT/FPI encoders<br/>2025.10"]
-        V1["v1 — monolithic VLA<br/>5-view, regression/diffusion heads"]
-        V2["v2 — modularised<br/>flow matching, sensor CLIP, state MAE"]
-        V3["v3 — eval &amp; ablation suite<br/>(most mature Qwen-era analysis)"]
-        V4["v4 — LeRobot reboot<br/>SmolVLA · ACT · Diffusion · π0"]
-        Q --> V1 --> V2 --> V3
-        V3 -.->|"framework swap<br/>3.2% file overlap"| V4
+    subgraph DT["Digital twin — MuJoCo"]
+        SIM["Meca500 + trocar needle<br/>+ eye phantom"]
+        SIM --> DATA["Systematic<br/>data collection"]
     end
 
-    subgraph SIM["sim — MuJoCo digital twin"]
-        S0["Sim_make_MECA<br/>STL assets, data generation"]
-        S1["Sim1 — calibration,<br/>digital twin bridge"]
-        S2["Sim2 — staged pipeline<br/>Sim / Dataset / TRAIN / Eval"]
-        S0 --> S1 --> S2
+    subgraph M["Insertion VLA"]
+        IMG["Vision tokens"] --> FUSE
+        TXT["Language tokens"] --> FUSE
+        SENS["Sensor encoder<br/>OCT depth · FPI force"] --> FUSE
+        FUSE["Multimodal fusion<br/>Qwen-VL backbone"] --> POL["Policy head<br/>Diffusion"]
     end
 
-    V4 <-->|"sim ↔ real"| S2
+    DATA --> M
+    POL --> ACT["Grounded action"]
+    ACT --> SIM
 
-    style V4 fill:#2d5016,color:#fff
-    style S2 fill:#2d5016,color:#fff
-    style Q fill:#5c3a00,color:#fff
+    style FUSE fill:#1f3a5f,color:#fff
+    style SENS fill:#5c3a00,color:#fff
+    style ACT fill:#2d5016,color:#fff
 ```
 
-**Repositories.**
-[`Insertion_VLA`](https://github.com/Najongs/Insertion_VLA) ·
-[`Insertion_VLAv2`](https://github.com/Najongs/Insertion_VLAv2) ·
+**Result.** The simulation-trained pipeline learns precise insertion behaviour for the
+target task, suggesting digital-twin acquisition plus multimodal sensing is a scalable
+route to autonomous precision manipulation in biomedical and microsurgical settings.
+
+**Stack** MuJoCo · Python (Qwen-VL, Diffusion policy) · C++ (sensor acquisition)
+**Repos** [`Insertion_VLA_Sim2`](https://github.com/Najongs/Insertion_VLA_Sim2) ·
 [`Insertion_VLAv3`](https://github.com/Najongs/Insertion_VLAv3) ·
-[`Insertion_VLA_Sim2`](https://github.com/Najongs/Insertion_VLA_Sim2) ·
-[`Qwen2.5-VL-3B OCT/FPI`](https://github.com/Najongs/Qwen2.5-VL-3B-_OCT_FPI_Action_Model)
-
-The dataset behind it — 1,281 episodes, 145 GB — is published as a LeRobot dataset with
-a card that documents its schema traps (two image encodings, sensor-rate mismatch).
+[`Qwen VLA + OCT/FPI`](https://github.com/Najongs/Qwen2.5-VL-3B-_OCT_FPI_Action_Model)
 
 ---
 
-## 3 · Fibre-optic sensing — knowing where the tip is
+## Project 02 · Vision-based 3D robot pose for collision avoidance
 
-Vision stops at the surface. An EFPI (extrinsic Fabry-Pérot interferometer) and OCT at
-the needle tip report what happens *inside* the tissue, and the interesting signal lives
-in the phase.
+**IEIE 2025 · first author · led as project owner**
+
+**Goal.** Predict a robot's 3D joint configuration from vision so a human sharing its
+workspace never gets hit.
+
+**The real obstacle was labels.** No pipeline existed to generate supervised 3D pose
+labels automatically. I built one: calibrate the camera, implement forward kinematics
+from the robot's DH parameters to get every joint pose in the base frame, then use the
+intrinsics to project those into camera coordinates — live, as data is captured.
 
 ```mermaid
 flowchart LR
-    RAW["EFPI / OCT<br/>raw interferogram"] --> PS["Phase shift"]
-    PS --> UW["Robust unwrapping<br/>threshold + dwell"]
-    UW --> PC["Puncture curve"]
-    PC --> CLS["Layer / status<br/>classification"]
-    CLS --> ST["Tip state"]
-    ST -.->|"fused as VLA input"| VLA["Insertion policy"]
+    subgraph LBL["Automatic labelling"]
+        DH["DH parameters"] --> FK["Forward kinematics<br/>joint poses in base frame"]
+        CAL["Camera calibration<br/>intrinsics + extrinsics"] --> PROJ
+        FK --> PROJ["Project → camera frame"]
+        PROJ --> GT["3D keypoint labels"]
+    end
 
-    style RAW fill:#1f3a5f,color:#fff
-    style ST fill:#2d5016,color:#fff
-    style VLA fill:#5c3a00,color:#fff
+    IMG["RGB frame"] --> D["DINOv3 backbone"]
+    D --> H["Keypoint &amp; joint-angle heads"]
+    GT --> H
+    H --> POSE["3D robot pose"]
+    POSE --> COL["Human–robot<br/>collision check"]
+
+    style D fill:#1f3a5f,color:#fff
+    style GT fill:#5c3a00,color:#fff
+    style COL fill:#8b0000,color:#fff
 ```
 
-Work splits cleanly: signal processing (phase unwrapping, OCT layer detection,
-self-attention / state encoders) on one side, puncture-curve classification — CNN,
-fine-tuned, and LSTM-ResNet variants — on the other.
+With labels solved, a DINOv3 foundation backbone plus keypoint and joint-angle heads
+does the estimation, with 2D–3D PnP recovering the camera-to-robot transform.
+
+**This line of work continued into [`DINObotPose`](https://github.com/Najongs/DINObotPose) `v1.0.0`** —
+a released reproduction package that removes the ground-truth bounding box entirely: a
+first pass fits the whole frame and projects its own solved skeleton to define the crop
+for a second pass, then iterative fitting recovers joint angles and camera pose together
+through differentiable forward kinematics. One configuration, every camera, both robots.
+
+**Stack** Python (DINOv3) · robot kinematics · camera calibration · 2D–3D PnP
+**Repos** [`DINObotPose`](https://github.com/Najongs/DINObotPose) ·
+[`DIP_ROBOTPOSE`](https://github.com/Najongs/DIP_ROBOTPOSE) ·
+[`Robot_joint_inference`](https://github.com/Najongs/Robot_joint_inference) (2024, DH + regression origin)
 
 ---
 
-## 4 · Bimanual foundation policies
+## Project 03 · Precision of an epidural force-sensing needle
 
-A 16-DoF bimanual manipulation corpus and the pipeline that trains on it, running on
-8×V100.
+**International Journal of Optomechatronics 20(1), 2026 · SCIE · 2nd of 5 authors**
+
+A Fabry-Pérot interferometer at the needle tip reports force optically. The signal that
+matters is buried in phase, and tissue puncture is a transient — so the problem is both
+signal processing and time series.
 
 ```mermaid
 flowchart LR
-    G["GIST release<br/>17 sets · 50%"] --> M["Manifest<br/>make_manifest.py"]
-    K["Self-collected<br/>10 sets · 20%"] --> M
-    H["Hub third-party<br/>25 sets · 30%"] --> M
-    M --> A["Distribution audit<br/>corpus_distribution_audit.md"]
-    A --> T["train_multi.py<br/>in-memory concat,<br/>no disk merge"]
-    T --> GPU["accelerate · 8×V100"]
-    GPU --> CK["Checkpoints"]
+    FPI["FPI raw<br/>interferogram"] --> FFT["FFT → phase shift<br/>(C++ preprocessing)"]
+    FFT --> SEQ["Windowed<br/>time series"]
+    SEQ --> LSTM["LSTM"]
+    LSTM --> PUNC["Puncture event<br/>prediction"]
 
-    style M fill:#1f3a5f,color:#fff
-    style A fill:#8b0000,color:#fff
-    style CK fill:#2d5016,color:#fff
+    style FFT fill:#5c3a00,color:#fff
+    style LSTM fill:#1f3a5f,color:#fff
+    style PUNC fill:#2d5016,color:#fff
 ```
 
-**52 datasets · 23,201 episodes · 10,313,809 frames.** The audit step is the part worth
-pointing at: it found that among the 16 action dimensions, **one axis — the left gripper —
-was scaled 137× apart between datasets.** Training without normalising it makes that
-axis uninterpretable, and nothing in the loss would have told you.
+**My contribution** — FPI sensor data analysis and the ML model.
+**Stack** C++ (FFT phase-shift computation) · Python (LSTM)
+
+---
+
+## Project 04 · Tremor compensation for a handheld confocal endomicroscope
+
+**IROS · 2nd of 5 authors**
+
+Probe-based confocal laser endomicroscopy (pCLE) of the retina is done by hand, and hand
+tremor corrupts the scan. Predict the tremor from OCT distance measurements and
+compensate before it lands in the image.
+
+```mermaid
+flowchart LR
+    OCT["OCT interferogram"] --> AL["FFT → A-line<br/>(C++ preprocessing)"]
+    AL --> DIST["Probe–retina distance<br/>time series"]
+    DIST --> GRU["GRU"]
+    GRU --> PRED["Tremor prediction"]
+    PRED --> COMP["Compensation<br/>during scan"]
+
+    style AL fill:#5c3a00,color:#fff
+    style GRU fill:#1f3a5f,color:#fff
+    style COMP fill:#2d5016,color:#fff
+```
+
+**My contribution** — tremor data analysis and the ML model.
+**Stack** C++ (FFT A-line computation) · Python (GRU)
+
+*Also presented in Korean at ICROS 2025 (제40회 제어로봇시스템학회 학술대회) as a
+non-contact handheld system with optical distance control.*
+
+---
+
+## Graduate coursework
+
+| Course | Topic | Practice |
+|---|---|---|
+| Advanced Deep Learning | Data-hungry / General / Efficient / Trustworthy AI | Implemented and reviewed **RT-1**, **RT-2**, **ALOHA** |
+| Robot System Implementation | Isaac Sim manipulator control | URDF modelling, ROS teleoperation (master–slave), Isaac Sim control |
+| Computer Vision | 3D vision-based robot pose estimation | ROI extraction → 3D robot + hand coordinates → collision detection |
+| Robot AI | Hand-eye calibration, multi-frame control | Hand-eye calibration; **Rodrigues network** to improve an existing pose model; Lie theory |
 
 ---
 
 ## How I keep research
 
-Every claim carries the evidence that supports it; refuted approaches stay on the
-record rather than being deleted; open questions are nodes, not TODOs.
+Every claim carries the evidence that supports it; refuted approaches stay on the record
+rather than being deleted; open questions are nodes, not TODOs.
 
 ```mermaid
 flowchart LR
