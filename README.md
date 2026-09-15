@@ -5,6 +5,10 @@
 **Robotics &amp; AI researcher.** I build vision-language-action policies for
 surgical needle insertion, and the perception stack that makes them trustworthy.
 
+[![CV](https://img.shields.io/badge/CV-0b5394?style=flat-square&logo=readthedocs&logoColor=white)](CV.md)
+[![Portfolio](https://img.shields.io/badge/Portfolio-1f6f3f?style=flat-square&logo=readme&logoColor=white)](PORTFOLIO.md)
+[![Knowledge graph](https://img.shields.io/badge/Knowledge%20graph-5c3a8c?style=flat-square&logo=obsidian&logoColor=white)](https://najongs.github.io/knowledge-vault/)
+
 </div>
 
 ---
