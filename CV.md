@@ -3,7 +3,7 @@
 Researcher, **Korea Institute of Robotics &amp; Technology Convergence (KIRO)** — AI Task Intelligence.
 Vision-language-action models for robot manipulation, 3D pose estimation, and sensor-fusion AI.
 
-📧 [nagus1999@dgist.ac.kr](mailto:nagus1999@dgist.ac.kr) ·
+📧 [nagus1999@kiro.re.kr](mailto:nagus1999@kiro.re.kr) (work) · [nagus1999@dgist.ac.kr](mailto:nagus1999@dgist.ac.kr) (academic) ·
 💻 [github.com/Najongs](https://github.com/Najongs) ·
 🔗 ORCID: `TODO` ·
 📚 [Knowledge graph](https://najongs.github.io/knowledge-vault/) ·

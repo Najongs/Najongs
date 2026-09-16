@@ -71,7 +71,8 @@ Pollen Reachy · FAIRINO FR5 · Franka · Stereolabs ZED · NVIDIA DGX-1 (8×V10
 
 ## 📫 Reach me
 
-[![Email](https://img.shields.io/badge/nagus1999@dgist.ac.kr-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:nagus1999@dgist.ac.kr)
+[![KIRO](https://img.shields.io/badge/nagus1999@kiro.re.kr-0b5394?style=flat-square&logo=maildotru&logoColor=white)](mailto:nagus1999@kiro.re.kr)
+[![DGIST](https://img.shields.io/badge/nagus1999@dgist.ac.kr-8a8a8a?style=flat-square&logo=gmail&logoColor=white)](mailto:nagus1999@dgist.ac.kr)
 
 <!--
 Najongs/Najongs — this README renders on the profile page.
