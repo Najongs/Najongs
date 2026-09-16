@@ -1,12 +1,13 @@
 {
  "vault": {
-  "nodes": 582,
-  "edges": 374
+  "nodes": 584,
+  "edges": 376
  },
  "hf": {
-  "models": 5,
+  "models": 12,
   "datasets": 5,
-  "downloads": 38
+  "downloads": 69,
+  "authed": true
  },
  "wandb": {
   "projects": 103,

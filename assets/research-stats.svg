@@ -3,17 +3,17 @@
 <text x="28" y="30" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="12.5" font-weight="700" fill="#8b949e" letter-spacing="0.8">RESEARCH AT A GLANCE</text>
 <rect x="28" y="52" width="3" height="84" rx="1.5" fill="#58a6ff"/>
 <text x="44" y="66" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="11" font-weight="700" fill="#58a6ff" letter-spacing="0.6">KNOWLEDGE GRAPH</text>
-<text x="44" y="104" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="30" font-weight="700" fill="#e6edf3">582</text>
+<text x="44" y="104" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="30" font-weight="700" fill="#e6edf3">584</text>
 <text x="44" y="124" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="11.5" fill="#7d8da1">nodes</text>
-<text x="148" y="104" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="30" font-weight="700" fill="#e6edf3">374</text>
+<text x="148" y="104" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="30" font-weight="700" fill="#e6edf3">376</text>
 <text x="148" y="124" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="11.5" fill="#7d8da1">typed edges</text>
 <rect x="409" y="52" width="3" height="84" rx="1.5" fill="#FFD21E"/>
 <text x="425" y="66" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="11" font-weight="700" fill="#FFD21E" letter-spacing="0.6">HUGGING FACE</text>
-<text x="425" y="104" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="30" font-weight="700" fill="#e6edf3">5</text>
+<text x="425" y="104" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="30" font-weight="700" fill="#e6edf3">12</text>
 <text x="425" y="124" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="11.5" fill="#7d8da1">models</text>
 <text x="529" y="104" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="30" font-weight="700" fill="#e6edf3">5</text>
 <text x="529" y="124" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="11.5" fill="#7d8da1">datasets</text>
-<text x="633" y="104" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="30" font-weight="700" fill="#e6edf3">38</text>
+<text x="633" y="104" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="30" font-weight="700" fill="#e6edf3">69</text>
 <text x="633" y="124" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="11.5" fill="#7d8da1">downloads</text>
 <rect x="791" y="52" width="3" height="84" rx="1.5" fill="#FFBE00"/>
 <text x="807" y="66" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="11" font-weight="700" fill="#FFBE00" letter-spacing="0.6">WEIGHTS &amp; BIASES</text>
@@ -21,5 +21,5 @@
 <text x="807" y="124" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="11.5" fill="#7d8da1">projects</text>
 <text x="911" y="104" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="30" font-weight="700" fill="#e6edf3">2,047</text>
 <text x="911" y="124" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="11.5" fill="#7d8da1">runs</text>
-<text x="28" y="154" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="10.5" fill="#5c6b7f">refreshed 2026-09-16 · wandb unreachable, last known values shown</text>
+<text x="28" y="154" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="10.5" fill="#5c6b7f">public + private · refreshed 2026-09-16</text>
 </svg>

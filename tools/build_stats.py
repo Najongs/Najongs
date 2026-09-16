@@ -5,8 +5,12 @@
 (assets/stats.json 에 보관) — 그래야 토큰이 없는 환경에서도 패널이 비지 않는다.
 
   지식그래프  najongs.github.io/knowledge-vault/graph.json   공개, 인증 불필요
-  Hugging Face  huggingface.co/api/{models,datasets}          공개, 인증 불필요
+  Hugging Face  huggingface.co/api/{models,datasets}          HF_TOKEN (없으면 공개분만)
   W&B          api.wandb.ai/graphql                           WANDB_API_KEY 필요
+
+숫자는 **전체 기준**이다 — 비공개 저장소·프로젝트를 포함한다. W&B 프로젝트가
+전부 비공개라 공개분만 세면 0 이 되어 패널이 거짓말을 하게 된다. 대신 패널에
+"public + private" 라고 적어 방문자가 눈으로 센 것과 다른 이유를 밝힌다.
 
 실행: python3 tools/build_stats.py
 """
@@ -31,10 +35,13 @@ def fetch_vault():
 
 
 def fetch_hf():
-    ms = get("https://huggingface.co/api/models?author=Najongs&limit=100")
-    ds = get("https://huggingface.co/api/datasets?author=Najongs&limit=100")
+    tok = os.environ.get("HF_TOKEN") or _read(pathlib.Path.home() / ".hf_najongs_token")
+    h = {"Authorization": f"Bearer {tok}"} if tok else {}
+    ms = get("https://huggingface.co/api/models?author=Najongs&limit=100", h)
+    ds = get("https://huggingface.co/api/datasets?author=Najongs&limit=100", h)
     return {"models": len(ms), "datasets": len(ds),
-            "downloads": sum(x.get("downloads", 0) for x in ms + ds)}
+            "downloads": sum(x.get("downloads", 0) for x in ms + ds),
+            "authed": bool(tok)}
 
 
 def fetch_wandb():
@@ -100,7 +107,7 @@ def render(stats, stale):
                      f' fill="#7d8da1">{esc(lab)}</text>')
             vx += max(len(v) * 19 + 34, 104)
         x += colw
-    note = "refreshed " + stats["built"]
+    note = "public + private · refreshed " + stats["built"]
     if stale:
         note += " · " + ", ".join(stale) + " unreachable, last known values shown"
     o.append(f'<text x="28" y="{H-14}" {F} font-size="10.5" fill="#5c6b7f">{esc(note)}</text>')
