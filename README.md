@@ -3,7 +3,7 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,12,20&height=160&section=header&text=Najongs&fontSize=58&fontAlignY=36&desc=robot%20learning%20·%20vision-language-action%20·%20surgical%20robotics&descAlignY=58&descSize=16&animation=fadeIn" />
 
 **Researcher at [KIRO](https://www.kiro.re.kr/) — AI Task Intelligence.**
-M.S. from DGIST (Intelligent Robot &amp; Opto-Mechatronics Lab). I build vision-language-action
+M.S. from DGIST (Intelligent Bio-Opto Mechatronics Lab). I build vision-language-action
 policies for precision robot manipulation, and the sensing stack that makes them trustworthy.
 
 [![CV](https://img.shields.io/badge/CV-0b5394?style=flat-square&logo=readthedocs&logoColor=white)](CV.md)
@@ -18,7 +18,7 @@ policies for precision robot manipulation, and the sensing stack that makes them
 
 | | Area | Focus |
 |---|---|---|
-| 🪡 | **Vision-Language-Action** | Meca500 R3 + eye-phantom needle insertion. Two generations: a Qwen2.5-VL pipeline with fused OCT/FPI sensing, then a full reboot on LeRobot (SmolVLA · ACT · Diffusion · π0), plus a MuJoCo sim twin. |
+| 🪡 | **Vision-Language-Action** | Meca500 R3 + eye-phantom needle insertion. Two generations: a Qwen-VL pipeline with fused OCT/FPI sensing, then a full reboot on LeRobot (SmolVLA · ACT · Diffusion · π0), plus a MuJoCo sim twin. |
 | 🤖 | **Robot pose estimation** | Monocular and multi-view robot pose from a *frozen* DINO backbone — one set of weights across arms, no real-world training. Meca500 · FR5 · Franka · Baxter. |
 | 🔦 | **Fiber-optic sensing** | EFPI interferometry and OCT for needle-tip state: phase unwrapping, layer detection, puncture-curve classification. |
 | 🦾 | **Foundation policies** | Bimanual 16-DoF manipulation corpus — 52 datasets, 23k episodes, 10.3M frames — and the multi-GPU pipeline that trains on it. |
@@ -37,35 +37,21 @@ nodes rather than TODOs.
 
 *Questions → Claims → Evidence → Experiments → Sources, rendered as a browsable graph.*
 
-## 🧭 Selected repositories
+## 🧭 Code
 
-**Vision-Language-Action**
-[`Insertion_VLA`](https://github.com/Najongs/Insertion_VLA) ·
-[`Insertion_VLAv2`](https://github.com/Najongs/Insertion_VLAv2) ·
-[`Insertion_VLAv3`](https://github.com/Najongs/Insertion_VLAv3) ·
-[`Insertion_VLA_Sim2`](https://github.com/Najongs/Insertion_VLA_Sim2) ·
-[`Qwen2.5-VL-3B OCT/FPI`](https://github.com/Najongs/Qwen2.5-VL-3B-_OCT_FPI_Action_Model)
+### → **[`DINObotPose`](https://github.com/Najongs/DINObotPose)** `v1.0.0`
 
-**Robot pose estimation**
-[`DIP_ROBOTPOSE`](https://github.com/Najongs/DIP_ROBOTPOSE) ·
-[`DINOv3_fine_tunning`](https://github.com/Najongs/DINOv3_fine_tunning) ·
-[`DINObotPose3`](https://github.com/Najongs/DINObotPose3) ·
-[`3d-robot-pose-estimation`](https://github.com/Najongs/3d-robot-pose-estimation) ·
-[`Robot_joint_inference`](https://github.com/Najongs/Robot_joint_inference)
+Monocular robot pose and joint-angle estimation with a pretrained vision foundation model
+and kinematic fitting. Pinned dependencies, checkpoint SHA-256 manifest, environment
+doctor, and one-command paper reproduction.
 
-**Data collection &amp; calibration**
-[`ZED_Cap_make_dataset`](https://github.com/Najongs/ZED_Cap_make_dataset) ·
-[`Panda_cap_make_dataset`](https://github.com/Najongs/Panda_cap_make_dataset) ·
-[`VLA_make_the_dataset`](https://github.com/Najongs/VLA_make_the_dataset) ·
-[`Intertek_Zed_ArUco_Calibration`](https://github.com/Najongs/Intertek_Zed_ArUco_Calibration)
+*The rest of my research repositories are private while the work is unpublished* —
+VLA policies for needle insertion, the pose-estimation lineage, fibre-optic sensing,
+and the data-collection and calibration tooling behind them. They open as the
+corresponding papers do. The [portfolio](PORTFOLIO.md) describes what is in them.
 
-**Robot platforms**
-[`reachy2019`](https://github.com/Najongs/reachy2019) ·
-[`Albabot`](https://github.com/Najongs/Albabot) ·
-[`Kiosk_pose_OnLab`](https://github.com/Najongs/Kiosk_pose_OnLab)
-
-> Older repositories are **archived, not deleted** — a superseded approach is still a
-> result. Each generation keeps code that never made it into its successor.
+> Superseded generations are **archived, not deleted** — a refuted approach is still a
+> result, and each generation holds code that never made it into its successor.
 
 ## 🛠 Stack
 

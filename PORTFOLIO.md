@@ -1,7 +1,7 @@
 # Portfolio — Jongyeol Na (나종열)
 
 Researcher at **KIRO** (Korea Institute of Robotics &amp; Technology Convergence), AI Task Intelligence.
-M.S. from DGIST, Intelligent Robot &amp; Opto-Mechatronics Lab.
+M.S. from DGIST, Intelligent Bio-Opto Mechatronics Lab (advisor: Prof. Cheol Song).
 
 📧 [nagus1999@dgist.ac.kr](mailto:nagus1999@dgist.ac.kr) ·
 📄 [CV](CV.md) ·
@@ -89,9 +89,7 @@ target task, suggesting digital-twin acquisition plus multimodal sensing is a sc
 route to autonomous precision manipulation in biomedical and microsurgical settings.
 
 **Stack** MuJoCo · Python (Qwen-VL, Diffusion policy) · C++ (sensor acquisition)
-**Repos** [`Insertion_VLA_Sim2`](https://github.com/Najongs/Insertion_VLA_Sim2) ·
-[`Insertion_VLAv3`](https://github.com/Najongs/Insertion_VLAv3) ·
-[`Qwen VLA + OCT/FPI`](https://github.com/Najongs/Qwen2.5-VL-3B-_OCT_FPI_Action_Model)
+**Code** `Insertion_VLA` v1–v4 and the MuJoCo sim line — *private until publication*
 
 ---
 
@@ -137,9 +135,8 @@ for a second pass, then iterative fitting recovers joint angles and camera pose 
 through differentiable forward kinematics. One configuration, every camera, both robots.
 
 **Stack** Python (DINOv3) · robot kinematics · camera calibration · 2D–3D PnP
-**Repos** [`DINObotPose`](https://github.com/Najongs/DINObotPose) ·
-[`DIP_ROBOTPOSE`](https://github.com/Najongs/DIP_ROBOTPOSE) ·
-[`Robot_joint_inference`](https://github.com/Najongs/Robot_joint_inference) (2024, DH + regression origin)
+**Code** ⭐ **[`DINObotPose`](https://github.com/Najongs/DINObotPose) `v1.0.0` — public.**
+The research tree and the nine-generation lineage behind it are private.
 
 ---
 

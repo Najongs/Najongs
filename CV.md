@@ -17,7 +17,7 @@ Vision-language-action models for robot manipulation, 3D pose estimation, and se
 
 **M.S., Artificial Intelligence**, Interdisciplinary Studies
 Daegu Gyeongbuk Institute of Science and Technology (DGIST) Feb. 2024 – Aug. 2026
-Intelligent Robot &amp; Opto-Mechatronics Lab — advisor: **Prof. Chul Song**
+Intelligent Bio-Opto Mechatronics Lab — advisor: **Prof. Cheol Song**
 GPA 3.67/4.3
 *Thesis —* **Simulation-Based Multi-Modal Vision-Language-Action Model for Robotic Insertion**
 
@@ -74,7 +74,7 @@ and kinematic fitting. Pinned dependencies, checkpoint manifest, one-command rep
 
 | Project | Sponsor | PI | Period |
 |---|---|---|---|
-| Intelligent endomicroscope converging 3D optical imaging and digital palpation diagnosis | MSIT | Chul Song | 2024.05 – 2026.04 |
+| Intelligent endomicroscope converging 3D optical imaging and digital palpation diagnosis | MSIT | Cheol Song | 2024.05 – 2026.04 |
 | LLM- and 3D point-cloud-based AI data fusion innovation technology | MSIT | Seonghun Im | 2024.07 – 2026.08 |
 | Clinician-collaborative robot platform for three pain-intervention procedures (cross-drug infusion + modular instruments) | MOTIE | Jongseok Won | 2024.05 – 2025.12 |
 | Public-technology market-linked startup exploration (I-Corps, Daegu-Gyeongbuk Lab Startup Innovation Group) | MSIT | Jeongsu Lee | 2025.06 – 2025.12 |
@@ -145,8 +145,9 @@ FAIRINO FR5 · Franka · Stereolabs ZED · Luxonis OAK
 
 ## References
 
-**Prof. Chul Song** — M.S. advisor
-Intelligent Robot &amp; Opto-Mechatronics Lab, DGIST, Daegu, South Korea
+**Prof. Cheol Song** — M.S. advisor
+Intelligent Bio-Opto Mechatronics Lab,
+Dept. of Robotics and Mechatronics Engineering, DGIST, Daegu, South Korea
 
 **Prof. Jun-Muck Lim** — undergraduate research supervisor
 Intelligent Big Data Analysis Lab, Dept. of Creative Convergence Engineering,
