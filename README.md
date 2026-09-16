@@ -13,6 +13,8 @@ touching.
 [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black)](https://huggingface.co/Najongs)
 [![Weights & Biases](https://img.shields.io/badge/W%26B-FFBE00?style=flat-square&logo=weightsandbiases&logoColor=black)](https://wandb.ai/najyeol99)
 
+<img src="assets/research-stats.svg" alt="Research at a glance — knowledge graph, Hugging Face and W&B figures" width="100%" />
+
 </div>
 
 ---
