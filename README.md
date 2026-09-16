@@ -3,7 +3,7 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,12,20&height=160&section=header&text=Najongs&fontSize=58&fontAlignY=36&desc=robot%20learning%20·%20vision-language-action%20·%20surgical%20robotics&descAlignY=58&descSize=16&animation=fadeIn" />
 
 **Researcher at [KIRO](https://www.kiro.re.kr/) — AI Task Intelligence.**
-M.S. from DGIST (Intelligent Bio-Opto Mechatronics Lab). I build vision-language-action
+M.S. from DGIST (Intelligent Robot-Opto Mechatronics Lab). I build vision-language-action
 policies for precision robot manipulation, and the sensing stack that makes them trustworthy.
 
 [![CV](https://img.shields.io/badge/CV-0b5394?style=flat-square&logo=readthedocs&logoColor=white)](CV.md)

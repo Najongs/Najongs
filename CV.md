@@ -17,7 +17,7 @@ Vision-language-action models for robot manipulation, 3D pose estimation, and se
 
 **M.S., Artificial Intelligence**, Interdisciplinary Studies
 Daegu Gyeongbuk Institute of Science and Technology (DGIST) Feb. 2024 – Aug. 2026
-Intelligent Bio-Opto Mechatronics Lab — advisor: **Prof. Cheol Song**
+Intelligent Robot-Opto Mechatronics Lab — advisor: **Prof. Cheol Song**
 GPA 3.67/4.3
 *Thesis —* **Simulation-Based Multi-Modal Vision-Language-Action Model for Robotic Insertion**
 
@@ -146,7 +146,7 @@ FAIRINO FR5 · Franka · Stereolabs ZED · Luxonis OAK
 ## References
 
 **Prof. Cheol Song** — M.S. advisor
-Intelligent Bio-Opto Mechatronics Lab,
+Intelligent Robot-Opto Mechatronics Lab,
 Dept. of Robotics and Mechatronics Engineering, DGIST, Daegu, South Korea
 
 **Prof. Jun-Muck Lim** — undergraduate research supervisor
