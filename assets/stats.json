@@ -4,10 +4,10 @@
   "edges": 376
  },
  "hf": {
-  "models": 12,
+  "models": 5,
   "datasets": 5,
-  "downloads": 69,
-  "authed": true
+  "downloads": 38,
+  "authed": false
  },
  "wandb": {
   "projects": 103,
