@@ -33,9 +33,15 @@ I keep my research as a **discourse graph** — every claim carries the evidence
 supports it, refuted approaches stay on the record, and open questions are first-class
 nodes rather than TODOs.
 
-### → **[najongs.github.io/knowledge-vault](https://najongs.github.io/knowledge-vault/)**
+[![Research knowledge graph](assets/knowledge-graph.svg)](https://najongs.github.io/knowledge-vault/)
 
-*Questions → Claims → Evidence → Experiments → Sources, rendered as a browsable graph.*
+### → **[najongs.github.io/knowledge-vault](https://najongs.github.io/knowledge-vault/)** — browse it live
+
+Each island above is one line of argument. The clusters at the top are where a question
+was pursued all the way to evidence; the loose dots below are findings not yet tied to
+anything — the honest state of most research notes, and the reason the graph is worth
+keeping at all. Red rings are **refuted** claims, kept on the record so the same
+experiment is not run twice.
 
 ## 🧭 Code
 
