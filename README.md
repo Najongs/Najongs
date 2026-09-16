@@ -10,6 +10,8 @@ touching.
 [![CV](https://img.shields.io/badge/CV-0b5394?style=flat-square&logo=readthedocs&logoColor=white)](CV.md)
 [![Portfolio](https://img.shields.io/badge/Portfolio-1f6f3f?style=flat-square&logo=readme&logoColor=white)](PORTFOLIO.md)
 [![Knowledge graph](https://img.shields.io/badge/Knowledge%20graph-5c3a8c?style=flat-square&logo=obsidian&logoColor=white)](https://najongs.github.io/knowledge-vault/)
+[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black)](https://huggingface.co/Najongs)
+[![Weights & Biases](https://img.shields.io/badge/W%26B-FFBE00?style=flat-square&logo=weightsandbiases&logoColor=black)](https://wandb.ai/najyeol99)
 
 </div>
 
@@ -62,6 +64,12 @@ corresponding papers do. The [portfolio](PORTFOLIO.md) describes what is in them
 
 > Superseded generations are **archived, not deleted** — a refuted approach is still a
 > result, and each generation holds code that never made it into its successor.
+
+**Weights and data** live on [Hugging Face](https://huggingface.co/Najongs) —
+[`dinobotpose`](https://huggingface.co/Najongs/dinobotpose) is what the release script fetches,
+and [`meca500-needle-insertion`](https://huggingface.co/datasets/Najongs/meca500-needle-insertion)
+is 1,281 episodes of real needle-insertion demonstrations with synchronised OCT and force.
+**Training runs** are on [W&B](https://wandb.ai/najyeol99).
 
 ## 🛠 Stack
 
