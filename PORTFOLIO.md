@@ -19,7 +19,7 @@ what is happening.** Each adds a different sensing modality to the loop.
 
 | # | Project | Venue | Role | Core |
 |---|---|---|---|---|
-| 01 | Multimodal VLA for precise needle positioning | KRoC 2025 | **1st author** | Qwen3.5-VL (3B) + OCT/FPI fusion, Diffusion policy, MuJoCo |
+| 01 | Multimodal VLA for precise needle positioning | KRoC 2025 | **1st author** | Qwen3.5-VL (2B) + OCT/FPI fusion, Diffusion policy, MuJoCo |
 | 02 | Human-robot collision avoidance via 3D pose | IEIE 2025 | **1st author** | DINOv3 keypoints + FK + PnP |
 | 03 | Epidural force-sensing needle precision | IJO 2026 (SCIE) | 2nd of 5 | FPI phase-shift + LSTM |
 | 04 | Handheld confocal endomicroscope, tremor compensation | IROS | 2nd of 5 | OCT A-line + GRU |
@@ -57,7 +57,7 @@ real demonstrations at that precision is slow and expensive.
 
 **Approach — simulation first.** Build a high-fidelity MuJoCo digital twin of a Meca500
 arm and a trocar-needle insertion task on an eye phantom, then collect data and train
-entirely inside it. A pretrained **Qwen3.5-VL (3B)** foundation model is extended with a **sensor
+entirely inside it. A pretrained **Qwen3.5-VL (2B)** foundation model is extended with a **sensor
 encoder** that ingests OCT (depth) and FPI (force) signals; those fuse with the visual and
 linguistic representations to produce physically grounded actions.
 
@@ -72,7 +72,7 @@ flowchart TD
         IMG["Vision tokens"] --> FUSE
         TXT["Language tokens"] --> FUSE
         SENS["Sensor encoder<br/>OCT depth · FPI force"] --> FUSE
-        FUSE["Multimodal fusion<br/>Qwen3.5-VL 3B backbone"] --> POL["Policy head<br/>Diffusion"]
+        FUSE["Multimodal fusion<br/>Qwen3.5-VL 2B backbone"] --> POL["Policy head<br/>Diffusion"]
     end
 
     DATA --> M
@@ -88,7 +88,7 @@ flowchart TD
 target task, suggesting digital-twin acquisition plus multimodal sensing is a scalable
 route to autonomous precision manipulation in biomedical and microsurgical settings.
 
-**Stack** MuJoCo · Python (Qwen3.5-VL 3B, Diffusion policy) · C++ (sensor acquisition)
+**Stack** MuJoCo · Python (Qwen3.5-VL 2B, Diffusion policy) · C++ (sensor acquisition)
 **Code** `Insertion_VLA` v1–v4 and the MuJoCo sim line — *private until publication*
 
 ---

@@ -18,7 +18,7 @@ policies for precision robot manipulation, and the sensing stack that makes them
 
 | | Area | Focus |
 |---|---|---|
-| 🪡 | **Vision-Language-Action** | Meca500 R3 + eye-phantom needle insertion. Two generations: a Qwen3.5-VL (3B) pipeline with fused OCT/FPI sensing, then a full reboot on LeRobot (SmolVLA · ACT · Diffusion · π0), plus a MuJoCo sim twin. |
+| 🪡 | **Vision-Language-Action** | Meca500 R3 + eye-phantom needle insertion. Two generations: a Qwen3.5-VL (2B) pipeline with fused OCT/FPI sensing, then a full reboot on LeRobot (SmolVLA · ACT · Diffusion · π0), plus a MuJoCo sim twin. |
 | 🤖 | **Robot pose estimation** | Monocular and multi-view robot pose from a *frozen* DINO backbone — one set of weights across arms, no real-world training. Meca500 · FR5 · Franka · Baxter. |
 | 🔦 | **Fiber-optic sensing** | EFPI interferometry and OCT for needle-tip state: phase unwrapping, layer detection, puncture-curve classification. |
 | 🦾 | **Foundation policies** | Bimanual 16-DoF manipulation corpus — 52 datasets, 23k episodes, 10.3M frames — and the multi-GPU pipeline that trains on it. |
