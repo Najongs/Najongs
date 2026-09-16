@@ -1,10 +1,11 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,12,20&height=160&section=header&text=Najongs&fontSize=58&fontAlignY=36&desc=robot%20learning%20·%20vision-language-action%20·%20surgical%20robotics&descAlignY=58&descSize=16&animation=fadeIn" />
+<img src="assets/header.svg" alt="Jongyeol Na — Researcher, KIRO — AI Task Intelligence" width="100%" />
 
-**Researcher at [KIRO](https://www.kiro.re.kr/) — AI Task Intelligence.**
-M.S. from DGIST (Intelligent Robot-Opto Mechatronics Lab). I build vision-language-action
-policies for precision robot manipulation, and the sensing stack that makes them trustworthy.
+M.S. from DGIST, [Intelligent Robot-Opto Mechatronics Lab](https://scholar.dgist.ac.kr/).
+I build vision-language-action policies for precision robot manipulation — and the sensing
+stack that makes them trustworthy, because vision alone cannot tell you what a needle is
+touching.
 
 [![CV](https://img.shields.io/badge/CV-0b5394?style=flat-square&logo=readthedocs&logoColor=white)](CV.md)
 [![Portfolio](https://img.shields.io/badge/Portfolio-1f6f3f?style=flat-square&logo=readme&logoColor=white)](PORTFOLIO.md)
@@ -33,15 +34,17 @@ I keep my research as a **discourse graph** — every claim carries the evidence
 supports it, refuted approaches stay on the record, and open questions are first-class
 nodes rather than TODOs.
 
-[![Research knowledge graph](assets/knowledge-graph.svg)](https://najongs.github.io/knowledge-vault/)
+[![Research knowledge graph](assets/knowledge-graph.gif)](https://najongs.github.io/knowledge-vault/)
 
 ### → **[najongs.github.io/knowledge-vault](https://najongs.github.io/knowledge-vault/)** — browse it live
 
-Each island above is one line of argument. The clusters at the top are where a question
-was pursued all the way to evidence; the loose dots below are findings not yet tied to
-anything — the honest state of most research notes, and the reason the graph is worth
-keeping at all. Red rings are **refuted** claims, kept on the record so the same
+*Recorded from the live site.* Every dot is a question, claim, evidence item, experiment
+or source; every line is a typed relation. The shape controls re-project the same graph —
+sphere, cube, helix, islands — and **Meaning** re-lays it by semantic similarity instead
+of links. Refuted claims stay on the record rather than being deleted, so the same
 experiment is not run twice.
+
+**Click the graph to explore it live.**
 
 ## 🧭 Code
 
