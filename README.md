@@ -2,7 +2,7 @@
 
 <img src="assets/header.svg" alt="Jongyeol Na — Researcher, KIRO — AI Task Intelligence" width="100%" />
 
-M.S. from DGIST, [Intelligent Robot-Opto Mechatronics Lab](https://scholar.dgist.ac.kr/).
+M.S. from DGIST, [Intelligent Robot OptoMechatronics (IROM) Lab](https://sites.google.com/view/dgist-irom/home).
 I build vision-language-action policies for precision robot manipulation — and the sensing
 stack that makes them trustworthy, because vision alone cannot tell you what a needle is
 touching.

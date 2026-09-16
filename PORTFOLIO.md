@@ -1,7 +1,7 @@
 # Portfolio — Jongyeol Na (나종열)
 
 Researcher at **KIRO** (Korea Institute of Robotics &amp; Technology Convergence), AI Task Intelligence.
-M.S. from DGIST, Intelligent Robot-Opto Mechatronics Lab (advisor: Prof. Cheol Song).
+M.S. from DGIST, [Intelligent Robot OptoMechatronics (IROM) Lab](https://sites.google.com/view/dgist-irom/home) — advisor: Prof. Cheol Song.
 
 📧 [nagus1999@kiro.re.kr](mailto:nagus1999@kiro.re.kr) (work) · [nagus1999@dgist.ac.kr](mailto:nagus1999@dgist.ac.kr) (academic) ·
 📄 [CV](CV.md) ·
