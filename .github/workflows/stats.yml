@@ -4,6 +4,7 @@ name: refresh stats
 # 숫자는 전체 기준이다 — 비공개 저장소·프로젝트를 포함한다. 그래서 시크릿이 둘 필요하다:
 #   HF_TOKEN        없으면 HF 가 공개분만 세어 12 대신 5 가 나온다 (읽기 권한이면 충분)
 #   WANDB_API_KEY   없으면 W&B 가 통째로 실패한다 (프로젝트가 전부 비공개)
+# GitHub 기여 잔디는 Actions 가 자동으로 주는 GITHUB_TOKEN 으로 읽는다 — 시크릿 불필요.
 # 둘 중 하나가 없어도 패널은 assets/stats.json 의 마지막 성공값을 그대로 쓴다.
 # 지식그래프만 공개 피드라 인증이 필요 없다.
 
@@ -37,6 +38,7 @@ jobs:
         env:
           WANDB_API_KEY: ${{ secrets.WANDB_API_KEY }}
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 tools/build_stats.py
 
       - name: 바뀐 것이 있으면 커밋
