@@ -9,11 +9,11 @@
 <text x="148" y="124" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="11.5" fill="#7d8da1">typed edges</text>
 <rect x="409" y="52" width="3" height="84" rx="1.5" fill="#FFD21E"/>
 <text x="425" y="66" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="11" font-weight="700" fill="#FFD21E" letter-spacing="0.6">HUGGING FACE</text>
-<text x="425" y="104" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="30" font-weight="700" fill="#e6edf3">12</text>
+<text x="425" y="104" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="30" font-weight="700" fill="#e6edf3">5</text>
 <text x="425" y="124" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="11.5" fill="#7d8da1">models</text>
 <text x="529" y="104" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="30" font-weight="700" fill="#e6edf3">5</text>
 <text x="529" y="124" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="11.5" fill="#7d8da1">datasets</text>
-<text x="633" y="104" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="30" font-weight="700" fill="#e6edf3">69</text>
+<text x="633" y="104" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="30" font-weight="700" fill="#e6edf3">38</text>
 <text x="633" y="124" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="11.5" fill="#7d8da1">downloads</text>
 <rect x="791" y="52" width="3" height="84" rx="1.5" fill="#FFBE00"/>
 <text x="807" y="66" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="11" font-weight="700" fill="#FFBE00" letter-spacing="0.6">WEIGHTS &amp; BIASES</text>
@@ -170,7 +170,7 @@
 <rect x="364" y="236" width="13" height="13" rx="3" fill="#161b22"/>
 <rect x="364" y="252" width="13" height="13" rx="3" fill="#161b22"/>
 <rect x="364" y="268" width="13" height="13" rx="3" fill="#161b22"/>
-<rect x="364" y="284" width="13" height="13" rx="3" fill="#161b22"/>
+<rect x="364" y="284" width="13" height="13" rx="3" fill="#0e4429"/>
 <rect x="380" y="188" width="13" height="13" rx="3" fill="#0e4429"/>
 <rect x="380" y="204" width="13" height="13" rx="3" fill="#161b22"/>
 <rect x="380" y="220" width="13" height="13" rx="3" fill="#161b22"/>
@@ -370,14 +370,14 @@
 <rect x="828" y="188" width="13" height="13" rx="3" fill="#161b22"/>
 <rect x="828" y="204" width="13" height="13" rx="3" fill="#161b22"/>
 <rect x="828" y="220" width="13" height="13" rx="3" fill="#161b22"/>
-<rect x="828" y="236" width="13" height="13" rx="3" fill="#161b22"/>
+<rect x="828" y="236" width="13" height="13" rx="3" fill="#0e4429"/>
 <rect x="828" y="252" width="13" height="13" rx="3" fill="#006d32"/>
 <rect x="828" y="268" width="13" height="13" rx="3" fill="#161b22"/>
 <rect x="828" y="284" width="13" height="13" rx="3" fill="#161b22"/>
 <rect x="844" y="188" width="13" height="13" rx="3" fill="#161b22"/>
 <rect x="844" y="204" width="13" height="13" rx="3" fill="#161b22"/>
 <rect x="844" y="220" width="13" height="13" rx="3" fill="#161b22"/>
-<rect x="844" y="236" width="13" height="13" rx="3" fill="#161b22"/>
+<rect x="844" y="236" width="13" height="13" rx="3" fill="#0e4429"/>
 <rect x="844" y="252" width="13" height="13" rx="3" fill="#0e4429"/>
 <rect x="844" y="268" width="13" height="13" rx="3" fill="#0e4429"/>
 <rect x="844" y="284" width="13" height="13" rx="3" fill="#161b22"/>
