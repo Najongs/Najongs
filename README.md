@@ -10,6 +10,7 @@ touching.
 [![CV](https://img.shields.io/badge/CV-0b5394?style=flat-square&logo=readthedocs&logoColor=white)](CV.md)
 [![Portfolio](https://img.shields.io/badge/Portfolio-1f6f3f?style=flat-square&logo=readme&logoColor=white)](PORTFOLIO.md)
 [![Knowledge graph](https://img.shields.io/badge/Knowledge%20graph-5c3a8c?style=flat-square&logo=obsidian&logoColor=white)](https://najongs.github.io/knowledge-vault/)
+[![ORCID](https://img.shields.io/badge/ORCID-A6CE39?style=flat-square&logo=orcid&logoColor=white)](https://orcid.org/0009-0004-2127-0365)
 [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black)](https://huggingface.co/Najongs)
 [![Weights & Biases](https://img.shields.io/badge/W%26B-FFBE00?style=flat-square&logo=weightsandbiases&logoColor=black)](https://wandb.ai/najyeol99)
 

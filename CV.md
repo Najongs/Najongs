@@ -5,7 +5,7 @@ Vision-language-action models for robot manipulation, 3D pose estimation, and se
 
 📧 [nagus1999@kiro.re.kr](mailto:nagus1999@kiro.re.kr) (work) · [nagus1999@dgist.ac.kr](mailto:nagus1999@dgist.ac.kr) (academic) ·
 💻 [github.com/Najongs](https://github.com/Najongs) ·
-🔗 ORCID: `TODO` ·
+🔗 [ORCID 0009-0004-2127-0365](https://orcid.org/0009-0004-2127-0365) ·
 📚 [Knowledge graph](https://najongs.github.io/knowledge-vault/) ·
 📄 [Portfolio](PORTFOLIO.md)
 

@@ -4,6 +4,7 @@ Researcher at **KIRO** (Korea Institute of Robotics &amp; Technology Convergence
 M.S. from DGIST, [Intelligent Robot OptoMechatronics (IROM) Lab](https://sites.google.com/view/dgist-irom/home) — advisor: Prof. Cheol Song.
 
 📧 [nagus1999@kiro.re.kr](mailto:nagus1999@kiro.re.kr) (work) · [nagus1999@dgist.ac.kr](mailto:nagus1999@dgist.ac.kr) (academic) ·
+🔗 [ORCID 0009-0004-2127-0365](https://orcid.org/0009-0004-2127-0365) ·
 📄 [CV](CV.md) ·
 💻 [github.com/Najongs](https://github.com/Najongs) ·
 📚 [Knowledge graph](https://najongs.github.io/knowledge-vault/)
