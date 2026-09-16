@@ -129,7 +129,7 @@ and kinematic fitting. Pinned dependencies, checkpoint manifest, one-command rep
 ## Technical Skills
 
 **Languages** Python · C++ · CUDA
-**VLA &amp; policy learning** Qwen-VL · SmolVLA · ACT · Diffusion Policy · π0 · LeRobot · flow matching
+**VLA &amp; policy learning** Qwen3.5-VL · SmolVLA · ACT · Diffusion Policy · π0 · LeRobot · flow matching
 **Vision** DINOv2/v3 · SegFormer · SAM · keypoint &amp; joint-angle heads · ArUco / multi-camera calibration
 **Robotics** ROS 2 · MuJoCo · NVIDIA Isaac Sim · forward kinematics · hand-eye calibration ·
 2D–3D PnP · Lie theory / Rodrigues
