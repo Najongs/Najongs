@@ -39,10 +39,11 @@ nodes rather than TODOs.
 ### → **[najongs.github.io/knowledge-vault](https://najongs.github.io/knowledge-vault/)** — browse it live
 
 *Recorded from the live site.* Every dot is a question, claim, evidence item, experiment
-or source; every line is a typed relation. The shape controls re-project the same graph —
-sphere, cube, helix, islands — and **Meaning** re-lays it by semantic similarity instead
-of links. Refuted claims stay on the record rather than being deleted, so the same
-experiment is not run twice.
+or source; every line is a typed relation between them. Refuted claims stay on the record
+rather than being deleted — so the same experiment does not get run twice.
+
+On the site the same graph can be re-projected as a cube, a helix or islands, or re-laid
+by semantic similarity instead of links.
 
 **Click the graph to explore it live.**
 
