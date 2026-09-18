@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 508" width="1200" height="508" role="img" aria-label="Research at a glance">
 <rect width="1200" height="508" rx="14" fill="#0b1220"/>
 <text x="28" y="34" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="12.5" font-weight="700" fill="#8b949e" letter-spacing="0.8">RESEARCH AT A GLANCE</text>
-<text x="1172" y="34" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="12" text-anchor="end" fill="#7d8da1">584 knowledge nodes · 376 typed edges</text>
+<text x="1172" y="34" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="12" text-anchor="end" fill="#7d8da1">601 knowledge nodes · 385 typed edges</text>
 <rect x="28" y="70" width="3" height="120" rx="1.5" fill="#39d353"/>
 <text x="44" y="84" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="11" font-weight="700" fill="#39d353" letter-spacing="0.6">GITHUB</text>
-<text x="44" y="102" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="11" fill="#7d8da1">355 contributions in the last year</text>
+<text x="44" y="102" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="11" fill="#7d8da1">366 contributions in the last year</text>
 <rect x="268" y="72" width="11" height="11" rx="2.5" fill="#161b22"/>
 <rect x="268" y="86" width="11" height="11" rx="2.5" fill="#161b22"/>
 <rect x="268" y="100" width="11" height="11" rx="2.5" fill="#161b22"/>
@@ -373,8 +373,9 @@
 <rect x="996" y="86" width="11" height="11" rx="2.5" fill="#26a641"/>
 <rect x="996" y="100" width="11" height="11" rx="2.5" fill="#39d353"/>
 <rect x="996" y="114" width="11" height="11" rx="2.5" fill="#39d353"/>
-<rect x="996" y="128" width="11" height="11" rx="2.5" fill="#0e4429"/>
-<text x="1028" y="98" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="10" fill="#5c6b7f">52 active days</text>
+<rect x="996" y="128" width="11" height="11" rx="2.5" fill="#006d32"/>
+<rect x="996" y="142" width="11" height="11" rx="2.5" fill="#006d32"/>
+<text x="1028" y="98" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="10" fill="#5c6b7f">53 active days</text>
 <text x="1028" y="114" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="10" fill="#5c6b7f">peak 166/day</text>
 <rect x="1028" y="126" width="9" height="9" rx="2" fill="#161b22"/>
 <rect x="1041" y="126" width="9" height="9" rx="2" fill="#0e4429"/>
@@ -383,7 +384,7 @@
 <rect x="1080" y="126" width="9" height="9" rx="2" fill="#39d353"/>
 <rect x="28" y="210" width="3" height="120" rx="1.5" fill="#FFD21E"/>
 <text x="44" y="224" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="11" font-weight="700" fill="#FFD21E" letter-spacing="0.6">HUGGING FACE</text>
-<text x="44" y="242" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="11" fill="#7d8da1">5 models · 5 datasets · 240 downloads</text>
+<text x="44" y="242" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="11" fill="#7d8da1">5 models · 5 datasets · 404 downloads</text>
 <rect x="268" y="212" width="11" height="11" rx="2.5" fill="#161b22"/>
 <rect x="268" y="226" width="11" height="11" rx="2.5" fill="#161b22"/>
 <rect x="268" y="240" width="11" height="11" rx="2.5" fill="#161b22"/>
@@ -752,8 +753,9 @@
 <rect x="996" y="226" width="11" height="11" rx="2.5" fill="#161b22"/>
 <rect x="996" y="240" width="11" height="11" rx="2.5" fill="#FFD21E"/>
 <rect x="996" y="254" width="11" height="11" rx="2.5" fill="#FFD21E"/>
-<rect x="996" y="268" width="11" height="11" rx="2.5" fill="#161b22"/>
-<text x="1028" y="238" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="10" fill="#5c6b7f">6 active days</text>
+<rect x="996" y="268" width="11" height="11" rx="2.5" fill="#4a3d00"/>
+<rect x="996" y="282" width="11" height="11" rx="2.5" fill="#161b22"/>
+<text x="1028" y="238" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="10" fill="#5c6b7f">7 active days</text>
 <text x="1028" y="254" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="10" fill="#5c6b7f">peak 46/day</text>
 <rect x="1028" y="266" width="9" height="9" rx="2" fill="#161b22"/>
 <rect x="1041" y="266" width="9" height="9" rx="2" fill="#4a3d00"/>
@@ -1132,6 +1134,7 @@
 <rect x="996" y="380" width="11" height="11" rx="2.5" fill="#161b22"/>
 <rect x="996" y="394" width="11" height="11" rx="2.5" fill="#161b22"/>
 <rect x="996" y="408" width="11" height="11" rx="2.5" fill="#161b22"/>
+<rect x="996" y="422" width="11" height="11" rx="2.5" fill="#161b22"/>
 <text x="1028" y="378" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="10" fill="#5c6b7f">177 active days</text>
 <text x="1028" y="394" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="10" fill="#5c6b7f">peak 79/day</text>
 <rect x="1028" y="406" width="9" height="9" rx="2" fill="#161b22"/>
@@ -1139,5 +1142,5 @@
 <rect x="1054" y="406" width="9" height="9" rx="2" fill="#8a6800"/>
 <rect x="1067" y="406" width="9" height="9" rx="2" fill="#d09800"/>
 <rect x="1080" y="406" width="9" height="9" rx="2" fill="#FFBE00"/>
-<text x="28" y="496" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="10.5" fill="#5c6b7f">public + private · refreshed 2026-09-17</text>
+<text x="28" y="496" font-family="ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial" font-size="10.5" fill="#5c6b7f">public + private · refreshed 2026-09-18</text>
 </svg>
