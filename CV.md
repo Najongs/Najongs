@@ -139,7 +139,7 @@ FFT phase-shift &amp; A-line computation in C++
 FAIRINO FR5 · Franka · Stereolabs ZED · Luxonis OAK
 **Infrastructure** NVIDIA DGX-1 (8×V100) · multi-GPU training (`accelerate`, DDP/ZeRO) · uv / conda · Git
 
-**Languages** Korean (native) · English
+**Spoken languages** Korean (native) · English
 
 ---
 
